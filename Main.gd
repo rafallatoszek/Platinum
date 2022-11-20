@@ -3,5 +3,4 @@ extends Node
 var score = 0
 
 func new_game():
-	print("Game started!")
-	$HUD.update_score(score)
+	get_tree().change_scene("res://Scenes/Game.tscn")
