@@ -1,9 +1,6 @@
 extends Node2D
 
 export var value: int
-
-func _ready():
-	update_block()
 	
 func update_block():
 	if value == 0:

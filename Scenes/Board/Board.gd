@@ -33,11 +33,28 @@ func _draw():
 			blocks.append(b)
 
 func _process(delta):
-	if Input.is_action_pressed("swipe_up"):
-		print("up")
-	if Input.is_action_pressed("swipe_down"):
-		print("down")
-	if Input.is_action_pressed("swipe_left"):
-		print("left")
-	if Input.is_action_pressed("swipe_right"):
-		print("right")
+	if Input.is_action_just_pressed("swipe_up"):
+		update_board(Vector2.UP)
+	if Input.is_action_just_pressed("swipe_down"):
+		update_board(Vector2.DOWN)
+	if Input.is_action_just_pressed("swipe_left"):
+		update_board(Vector2.LEFT)
+	if Input.is_action_just_pressed("swipe_right"):
+		update_board(Vector2.RIGHT)
+	
+	_draw()
+
+#TODO: remove/update with proper logic
+func update_board(direction):
+	var move_done = false
+	for i in values.size():
+		var column = values[i]
+		for j in column.size():
+			var value = column[j]
+			if value != 0 && !move_done:
+				values[i][j] = 0
+				var new_position_x = (i + int(direction.x)) % 4
+				var new_position_y = (j + int(direction.y)) % 4
+				values[new_position_x][new_position_y] = 2
+				move_done = true
+			
