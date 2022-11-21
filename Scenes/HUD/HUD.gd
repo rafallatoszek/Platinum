@@ -1,8 +1,6 @@
 extends CanvasLayer
 
-signal start_game
-
-func _on_StartButton_pressed():
+func _on_NewGameButton_pressed():
 	pass
 
 func _on_QuitButton_pressed():

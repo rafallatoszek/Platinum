@@ -10,3 +10,4 @@ block_scale = 2.0
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 450.0
 margin_bottom = 450.0
+color = Color( 0.490196, 0.490196, 0.490196, 1 )

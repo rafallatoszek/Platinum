@@ -4,14 +4,12 @@
 
 [node name="Block" type="Node2D"]
 script = ExtResource( 1 )
-number = 10
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
 margin_right = 50.0
 margin_bottom = 50.0
-color = Color( 0.831373, 0.776471, 0.529412, 1 )
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="ValueLabel" type="Label" parent="."]
 margin_right = 50.0
 margin_bottom = 50.0
 align = 1

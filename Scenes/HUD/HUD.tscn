@@ -30,5 +30,5 @@ text = "Platinum"
 align = 1
 valign = 1
 
-[connection signal="pressed" from="NewGameButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="NewGameButton" to="." method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
