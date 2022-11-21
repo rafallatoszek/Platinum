@@ -19,9 +19,9 @@ func _draw():
 		b.queue_free()
 	blocks = []
 	for i in values.size():
-		var row = values[i]
-		for j in row.size():
-			var val = row[j]
+		var column = values[i]
+		for j in column.size():
+			var val = column[j]
 			if val == null:
 				continue
 			var b = block.instance()
